@@ -1,0 +1,46 @@
+C:\VS2019a\Video generator\bin\Debug\Video generator.exe.config
+C:\VS2019a\Video generator\bin\Debug\Video generator.exe
+C:\VS2019a\Video generator\bin\Debug\Video generator.pdb
+C:\VS2019a\Video generator\bin\Debug\Interop.WMPLib.dll
+C:\VS2019a\Video generator\bin\Debug\AxInterop.WMPLib.dll
+C:\VS2019a\Video generator\obj\Debug\Video generator.csprojAssemblyReference.cache
+C:\VS2019a\Video generator\obj\Debug\Interop.WMPLib.dll
+C:\VS2019a\Video generator\obj\Debug\AxInterop.WMPLib.dll
+C:\VS2019a\Video generator\obj\Debug\Video generator.csproj.ResolveComReference.cache
+C:\VS2019a\Video generator\obj\Debug\Video_generator.Form1.resources
+C:\VS2019a\Video generator\obj\Debug\Video_generator.Properties.Resources.resources
+C:\VS2019a\Video generator\obj\Debug\Video generator.csproj.GenerateResource.cache
+C:\VS2019a\Video generator\obj\Debug\Video generator.csproj.CoreCompileInputs.cache
+C:\VS2019a\Video generator\obj\Debug\Video generator.exe
+C:\VS2019a\Video generator\obj\Debug\Video generator.pdb
+C:\VS2019a\Video generator\bin\Debug\Newtonsoft.Json.dll
+C:\VS2019a\Video generator\bin\Debug\Xabe.FFmpeg.dll
+C:\VS2019a\Video generator\bin\Debug\Newtonsoft.Json.xml
+C:\VS2019a\Video generator\bin\Debug\Xabe.FFmpeg.xml
+C:\VS2019a\Video generator\obj\Debug\Video generator.csproj.CopyComplete
+C:\VS2019a\Video generator\bin\Debug\NAudio.dll
+C:\VS2019a\Video generator\bin\Debug\NAudio.xml
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Video generator.exe.config
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Video generator.exe
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Video generator.pdb
+C:\Users\tp103\Desktop\Video generator\bin\Debug\NAudio.dll
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Xabe.FFmpeg.dll
+C:\Users\tp103\Desktop\Video generator\bin\Debug\NAudio.xml
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Xabe.FFmpeg.xml
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Interop.WMPLib.dll
+C:\Users\tp103\Desktop\Video generator\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Video generator.csprojAssemblyReference.cache
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Interop.WMPLib.dll
+C:\Users\tp103\Desktop\Video generator\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Video generator.csproj.ResolveComReference.cache
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Video_generator.Form1.resources
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Video_generator.Properties.Resources.resources
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Video generator.csproj.GenerateResource.cache
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Video generator.csproj.CoreCompileInputs.cache
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Video generator.csproj.CopyComplete
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Video generator.exe
+C:\Users\tp103\Desktop\Video generator\obj\Debug\Video generator.pdb
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Xabe.FFmpeg.Downloader.dll
+C:\Users\tp103\Desktop\Video generator\bin\Debug\Xabe.FFmpeg.Downloader.xml

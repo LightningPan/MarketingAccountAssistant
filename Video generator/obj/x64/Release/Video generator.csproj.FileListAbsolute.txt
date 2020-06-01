@@ -1,0 +1,57 @@
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Microsoft.CognitiveServices.Speech.core.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Microsoft.CognitiveServices.Speech.extension.kws.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Microsoft.CognitiveServices.Speech.extension.codec.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\x64\concrt140.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\x64\cvextern.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\x64\msvcp140.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\x64\msvcp140_1.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\x64\msvcp140_2.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\x64\msvcp140_codecvt_ids.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\x64\opencv_videoio_ffmpeg420_64.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\x64\vcruntime140.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\x64\vcruntime140_1.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Video generator.exe.config
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Video generator.exe
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Video generator.pdb
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Emgu.CV.UI.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Emgu.CV.World.NetStandard.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Microsoft.CognitiveServices.Speech.csharp.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\NAudio.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Xabe.FFmpeg.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Xabe.FFmpeg.Downloader.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\ZedGraph.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Emgu.CV.UI.xml
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Emgu.CV.World.NetStandard.xml
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Microsoft.CognitiveServices.Speech.csharp.xml
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\NAudio.xml
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Xabe.FFmpeg.xml
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Xabe.FFmpeg.Downloader.xml
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\ZedGraph.xml
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\de\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\es\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\fr\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\hu\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\it\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\ja\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\pt\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\ru\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\sk\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\sv\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\tr\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\zh-cn\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\zh-tw\ZedGraph.resources.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\Interop.WMPLib.dll
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\AxInterop.WMPLib.dll
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.csprojAssemblyReference.cache
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Interop.WMPLib.dll
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\AxInterop.WMPLib.dll
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.csproj.ResolveComReference.cache
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video_generator.Properties.Resources.resources
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video_generator.VideoHelper.resources
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.csproj.GenerateResource.cache
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.csproj.CoreCompileInputs.cache
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.csproj.CopyComplete
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.exe
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.pdb
