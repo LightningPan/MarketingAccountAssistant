@@ -231,8 +231,7 @@ namespace Video_generator
             saveFileDialog.Filter = "mp4文件|*.mp4";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if (radioButtonChooseVideo.Checked == true)
-                {
+                
                     if (info.subtitles == null) {
                         MessageBox.Show("请选择字幕文件");
                         return;
@@ -261,8 +260,7 @@ namespace Video_generator
                         Merge.MergeAll(info);
                     }));
                     GC.Collect();
-                    
-                }
+ 
 
             }
         }

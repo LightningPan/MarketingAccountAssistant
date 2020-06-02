@@ -31,11 +31,14 @@ namespace Video_generator
             {
                 MixBgmAndSpeech(info);
             }
+            
+
             progressstate("正在合成字幕");
             MergeSubtitle(info);
             progressstate("正在生成视频");
             Addaudio(info);
             progressstate("成功");
+            progressdelegate(100);
         }
 
 
@@ -74,6 +77,7 @@ namespace Video_generator
                     break;
                 }
                 string text;
+                
                 if ((text = SubtitleOption.GetFrameString(fps, i)) != "")
                 {
                    

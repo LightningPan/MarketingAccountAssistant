@@ -10,7 +10,7 @@ namespace Video_generator
 
         public static string SubtitleToXml(List<Subtitle> subtitles)
         {
-            string temp = "<speak version=\"1.0\" xml:lang=\"zh-CN\">";
+            string temp = "<speak version=\"1.0\" xml:lang=\"en-US\">";
             int time = 0;
             foreach (Subtitle subtitle in subtitles)
             {
