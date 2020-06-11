@@ -55,3 +55,7 @@ C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.csproj.Co
 C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.csproj.CopyComplete
 C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.exe
 C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video generator.pdb
+C:\Users\tp103\Desktop\Video generator\obj\x64\Release\Video_generator.Start.resources
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\ImageProcessingDemo1.exe
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\ImageProcessingDemo1.pdb
+C:\Users\tp103\Desktop\Video generator\bin\x64\Release\ImageProcessingDemo1.exe.config

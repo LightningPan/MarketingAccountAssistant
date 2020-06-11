@@ -38,9 +38,9 @@ namespace Video_generator
         }
 
         //从视频中提取音频文件
-        public static async void extractaudio(Object obj)
+        public static async void ExtractAudio(Info info)
         {
-            Info info = (Info)obj;
+          
             IConversion conversion = await FFmpeg.Conversions.FromSnippet.ExtractAudio(info.VideoPath, info.bgmTemp);
             if (File.Exists(info.bgmTemp)) {
                 System.IO.File.Delete(info.bgmTemp);

@@ -13,7 +13,7 @@ namespace Video_generator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VideoHelper());
+            Application.Run(new Start());
             //string fileName = "<speak version=\"1.0\" ";
             ////fileName += "xmlns=\"http://www.w3.org/2001/10/synthesis\" ";
             //fileName += "xml:lang=\"zh-CN\">";

@@ -97,6 +97,12 @@
   <ItemGroup>
     <Compile Include="Merge.cs" />
     <Compile Include="Info.cs" />
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
     <Compile Include="TTS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,6 +124,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VideoHelper.resx">
       <DependentUpon>VideoHelper.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +165,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="others\License-LGPL.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ImageProcessingDemo1\ImageProcessingDemo1\ImageProcessingDemo1.csproj">
+      <Project>{5542db80-2f52-4dc7-827e-5e65067e0678}</Project>
+      <Name>ImageProcessingDemo1</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.CognitiveServices.Speech.1.12.0\build\net461\Microsoft.CognitiveServices.Speech.targets" Condition="Exists('packages\Microsoft.CognitiveServices.Speech.1.12.0\build\net461\Microsoft.CognitiveServices.Speech.targets')" />

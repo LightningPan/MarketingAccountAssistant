@@ -31,16 +31,19 @@ namespace Video_generator
             this.labelBeginTime.DataBindings.Add("Text", trackBarBeginTime, "Value");
             this.trackBarEndTime.DataBindings.Add("Minimum", trackBarBeginTime, "Value");
             this.trackBarEndTime.DataBindings.Add("Maximum", trackBarBeginTime, "Maximum");
-            this.labelRN.DataBindings.Add("Text", trackBarR, "Value");
-            this.labelGN.DataBindings.Add("Text", trackBarG, "Value");
-            this.labelBN.DataBindings.Add("Text", trackBarB, "Value");
             this.textBoxSubtitlePositionX.DataBindings.Add("Text", info, "X");
             this.textBoxSubtitlePositionY.DataBindings.Add("Text", info, "Y");
             this.textBoxThickness.DataBindings.Add("Text", info, "thickness");
             this.textBoxScale.DataBindings.Add("Text", info, "scale");
             this.trackBarBeginTime.DataBindings.Add("Value", info, "BeginTime");
             this.trackBarEndTime.DataBindings.Add("Value", info, "EndTime");
-            pictureBox1.BackColor = Color.Black;
+            this.pictureBox1.BackColor = Color.Black;
+            this.labelSub.MouseDown += new MouseEventHandler(labelSub_MouseDown);
+            this.labelSub.MouseMove += new MouseEventHandler(labelSub_MouseMove);
+            this.labelSub.BackColor = Color.Transparent;
+            //this.labelSub.Parent = pictureBox1;
+            pictureBox1.Controls.Add(labelSub);
+            this.labelSub.Location = new Point(0,0);
             if (File.Exists(info.mixed))
             {
                 System.IO.File.Delete(info.mixed);
@@ -61,6 +64,22 @@ namespace Video_generator
         private void VideoHelper_Load(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void labelSub_MouseDown(object sender, MouseEventArgs e) {
+            m_lastMPoint = Control.MousePosition;
+            m_lastPoint = (sender as Label).Location;
+
+        }
+        private Point m_lastPoint;
+        private Point m_lastMPoint;
+        private void labelSub_MouseMove(object sender, MouseEventArgs e) {
+            if (e.Button == MouseButtons.Left)
+            {
+                labelSub.Location = new Point(m_lastPoint.X + Control.MousePosition.X - m_lastMPoint.X, m_lastPoint.Y + Control.MousePosition.Y - m_lastMPoint.Y);
+            }
+        
         }
 
         private void radioButtonChooseVideo_CheckedChanged(object sender, EventArgs e)
@@ -93,7 +112,7 @@ namespace Video_generator
                     MessageBox.Show("无法读取视频长度，长度调节暂不可用");
                 }
                 Task a = new Task(new Action(() => {
-                    Split.extractaudio(info);
+                    Split.ExtractAudio(info);
                 }));
                 a.Start();
                 a.Wait();
@@ -166,56 +185,7 @@ namespace Video_generator
         }
 
 
-        private void comboBoxFont_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (comboBoxFont.SelectedIndex)
-            {
-                case 0:
-                    info.fontFace = FontFace.HersheySimplex;
-                    break;
-                case 1:
-                    info.fontFace = FontFace.HersheyPlain;
-                    break;
-                case 2:
-                    info.fontFace = FontFace.HersheyDuplex;
-                    break;
-                case 3:
-                    info.fontFace = FontFace.HersheyComplex;
-                    break;
-                case 4:
-                    info.fontFace = FontFace.HersheyTriplex;
-                    break;
-                case 5:
-                    info.fontFace = FontFace.HersheyComplexSmall;
-                    break;
-                case 6:
-                    info.fontFace = FontFace.HersheyScriptSimplex;
-                    break;
-                case 7:
-                    info.fontFace = FontFace.HersheyScriptComplex;
-                    break;
-            }
-        }
 
-        private void comboBoxLineType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (comboBoxLineType.SelectedIndex)
-            {
-                case 0:
-                    info.lineType = LineType.Filled;
-                    break;
-                case 1:
-                    info.lineType = LineType.FourConnected;
-                    break;
-                case 2:
-                    info.lineType = LineType.EightConnected;
-                    break;
-                case 3:
-                    info.lineType = LineType.AntiAlias;
-                    break;
-
-            }
-        }
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
@@ -330,20 +300,6 @@ namespace Video_generator
 
         }
 
-        private void trackBarR_Scroll(object sender, EventArgs e)
-        {
-            info.R = trackBarR.Value;
-        }
-
-        private void trackBarG_Scroll(object sender, EventArgs e)
-        {
-            info.G = trackBarG.Value;
-        }
-
-        private void trackBarB_Scroll(object sender, EventArgs e)
-        {
-            info.B = trackBarB.Value;
-        }
 
         private void buttonPlay_Click(object sender, EventArgs e)
         {
@@ -357,12 +313,9 @@ namespace Video_generator
         }
 
        
-
-
         private IWavePlayer _device;
         private AudioFileReader _reader;
         private CancellationTokenSource _cts;
-
         private bool _sliderLock; // 逻辑锁，当为true时不更新界面上的进度
 
         private void buttonStop_Click(object sender, EventArgs e)
@@ -488,6 +441,81 @@ namespace Video_generator
                 StartUpdateProgress(); // 界面更新线程
                 _device.PlaybackStopped += Device_OnPlaybackStopped;
 
+            }
+        }
+
+        private void contextMenuStripOnPicBox_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+           
+        }
+
+        private void hershySimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.fontFace = FontFace.HersheySimplex;
+        }
+
+        private void hersheyPlainToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.fontFace = FontFace.HersheyPlain;
+        }
+
+        private void hersheyDuplexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.fontFace = FontFace.HersheyDuplex;
+        }
+
+        private void hersheyComplexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.fontFace = FontFace.HersheyComplex;
+        }
+
+        private void hersheyTriplexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.fontFace = FontFace.HersheyTriplex;
+        }
+
+        private void hersheyComplexSmallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.fontFace = FontFace.HersheyComplexSmall;
+        }
+
+        private void hersheyScriptSimplexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.fontFace = FontFace.HersheyScriptSimplex;
+        }
+
+        private void hersheyScriptComplexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.fontFace = FontFace.HersheyScriptComplex;
+        }
+
+        private void filledToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.lineType = LineType.Filled;
+        }
+
+        private void fourConnectedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.lineType = LineType.FourConnected;
+        }
+
+        private void eghitConnectedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.lineType = LineType.EightConnected;
+        }
+
+        private void antiAliasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            info.lineType = LineType.AntiAlias;
+        }
+
+        private void buttonColor_Click(object sender, EventArgs e)
+        {
+            if (colorDialogSubtitle.ShowDialog() == DialogResult.OK) {
+                info.R = colorDialogSubtitle.Color.R;
+                info.G = colorDialogSubtitle.Color.G;
+                info.B = colorDialogSubtitle.Color.B;
+                buttonColor.BackColor = colorDialogSubtitle.Color;
             }
         }
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.radioButtonChooseVideo = new System.Windows.Forms.RadioButton();
             this.radioButtonChooseBoth = new System.Windows.Forms.RadioButton();
             this.buttonChooseVideo = new System.Windows.Forms.Button();
@@ -54,20 +55,10 @@
             this.labelX = new System.Windows.Forms.Label();
             this.labelY = new System.Windows.Forms.Label();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.comboBoxFont = new System.Windows.Forms.ComboBox();
-            this.labelFont = new System.Windows.Forms.Label();
             this.textBoxScale = new System.Windows.Forms.TextBox();
             this.labelScale = new System.Windows.Forms.Label();
             this.textBoxThickness = new System.Windows.Forms.TextBox();
             this.labelThickness = new System.Windows.Forms.Label();
-            this.comboBoxLineType = new System.Windows.Forms.ComboBox();
-            this.labelLineType = new System.Windows.Forms.Label();
-            this.trackBarG = new System.Windows.Forms.TrackBar();
-            this.trackBarB = new System.Windows.Forms.TrackBar();
-            this.trackBarR = new System.Windows.Forms.TrackBar();
-            this.labelR = new System.Windows.Forms.Label();
-            this.labelG = new System.Windows.Forms.Label();
-            this.labelB = new System.Windows.Forms.Label();
             this.labelRN = new System.Windows.Forms.Label();
             this.labelGN = new System.Windows.Forms.Label();
             this.labelBN = new System.Windows.Forms.Label();
@@ -75,6 +66,21 @@
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.buttonMakeSure = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStripOnPicBox = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.字幕字体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hershySimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hersheyPlainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hersheyDuplexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hersheyComplexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hersheyTriplexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hersheyComplexSmallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hersheyScriptSimplexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hersheyScriptComplexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.线型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fourConnectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eghitConnectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.antiAliasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.labelProgress = new System.Windows.Forms.Label();
             this.labelState = new System.Windows.Forms.Label();
@@ -84,14 +90,15 @@
             this.buttonStop = new System.Windows.Forms.Button();
             this.lblPosition = new System.Windows.Forms.Label();
             this.buttonAudio = new System.Windows.Forms.Button();
+            this.colorDialogSubtitle = new System.Windows.Forms.ColorDialog();
+            this.buttonColor = new System.Windows.Forms.Button();
+            this.labelSub = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBgm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBeginTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarEndTime)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStripOnPicBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAudioPlayer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -331,34 +338,6 @@
             this.labelY.Text = "字幕坐标Y";
             this.labelY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBoxFont
-            // 
-            this.comboBoxFont.FormattingEnabled = true;
-            this.comboBoxFont.Items.AddRange(new object[] {
-            "HersheySimplex",
-            "HersheyPlain",
-            "HersheyDuplex",
-            "HersheyComplex",
-            "HersheyTriplex",
-            "HersheyComplexSmall",
-            "HersheyScriptSimplex",
-            "HersheyScriptComplex"});
-            this.comboBoxFont.Location = new System.Drawing.Point(750, 45);
-            this.comboBoxFont.Name = "comboBoxFont";
-            this.comboBoxFont.Size = new System.Drawing.Size(195, 26);
-            this.comboBoxFont.TabIndex = 27;
-            this.comboBoxFont.SelectedIndexChanged += new System.EventHandler(this.comboBoxFont_SelectedIndexChanged);
-            // 
-            // labelFont
-            // 
-            this.labelFont.AutoSize = true;
-            this.labelFont.Location = new System.Drawing.Point(967, 48);
-            this.labelFont.Name = "labelFont";
-            this.labelFont.Size = new System.Drawing.Size(80, 18);
-            this.labelFont.TabIndex = 28;
-            this.labelFont.Text = "字幕字体";
-            this.labelFont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // textBoxScale
             // 
             this.textBoxScale.Location = new System.Drawing.Point(544, 89);
@@ -397,87 +376,6 @@
             this.labelThickness.Text = "线条宽度";
             this.labelThickness.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBoxLineType
-            // 
-            this.comboBoxLineType.FormattingEnabled = true;
-            this.comboBoxLineType.Items.AddRange(new object[] {
-            "Filled",
-            "FourConnected",
-            "EightConnected",
-            "AntiAlias"});
-            this.comboBoxLineType.Location = new System.Drawing.Point(750, 89);
-            this.comboBoxLineType.Name = "comboBoxLineType";
-            this.comboBoxLineType.Size = new System.Drawing.Size(195, 26);
-            this.comboBoxLineType.TabIndex = 33;
-            this.comboBoxLineType.SelectedIndexChanged += new System.EventHandler(this.comboBoxLineType_SelectedIndexChanged);
-            // 
-            // labelLineType
-            // 
-            this.labelLineType.AutoSize = true;
-            this.labelLineType.Location = new System.Drawing.Point(970, 94);
-            this.labelLineType.Name = "labelLineType";
-            this.labelLineType.Size = new System.Drawing.Size(44, 18);
-            this.labelLineType.TabIndex = 34;
-            this.labelLineType.Text = "线型";
-            this.labelLineType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // trackBarG
-            // 
-            this.trackBarG.Location = new System.Drawing.Point(532, 158);
-            this.trackBarG.Maximum = 255;
-            this.trackBarG.Name = "trackBarG";
-            this.trackBarG.Size = new System.Drawing.Size(174, 69);
-            this.trackBarG.TabIndex = 35;
-            this.trackBarG.Scroll += new System.EventHandler(this.trackBarG_Scroll);
-            // 
-            // trackBarB
-            // 
-            this.trackBarB.Location = new System.Drawing.Point(739, 158);
-            this.trackBarB.Maximum = 255;
-            this.trackBarB.Name = "trackBarB";
-            this.trackBarB.Size = new System.Drawing.Size(174, 69);
-            this.trackBarB.TabIndex = 36;
-            this.trackBarB.Scroll += new System.EventHandler(this.trackBarB_Scroll);
-            // 
-            // trackBarR
-            // 
-            this.trackBarR.Location = new System.Drawing.Point(319, 158);
-            this.trackBarR.Maximum = 255;
-            this.trackBarR.Name = "trackBarR";
-            this.trackBarR.Size = new System.Drawing.Size(174, 69);
-            this.trackBarR.TabIndex = 37;
-            this.trackBarR.Scroll += new System.EventHandler(this.trackBarR_Scroll);
-            // 
-            // labelR
-            // 
-            this.labelR.AutoSize = true;
-            this.labelR.Location = new System.Drawing.Point(327, 137);
-            this.labelR.Name = "labelR";
-            this.labelR.Size = new System.Drawing.Size(53, 18);
-            this.labelR.TabIndex = 38;
-            this.labelR.Text = "颜色R";
-            this.labelR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelG
-            // 
-            this.labelG.AutoSize = true;
-            this.labelG.Location = new System.Drawing.Point(541, 137);
-            this.labelG.Name = "labelG";
-            this.labelG.Size = new System.Drawing.Size(53, 18);
-            this.labelG.TabIndex = 39;
-            this.labelG.Text = "颜色G";
-            this.labelG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelB
-            // 
-            this.labelB.AutoSize = true;
-            this.labelB.Location = new System.Drawing.Point(747, 137);
-            this.labelB.Name = "labelB";
-            this.labelB.Size = new System.Drawing.Size(53, 18);
-            this.labelB.TabIndex = 40;
-            this.labelB.Text = "颜色B";
-            this.labelB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelRN
             // 
             this.labelRN.AutoSize = true;
@@ -508,7 +406,7 @@
             // 
             // buttonGenerate
             // 
-            this.buttonGenerate.Location = new System.Drawing.Point(955, 158);
+            this.buttonGenerate.Location = new System.Drawing.Point(1121, 178);
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.Size = new System.Drawing.Size(93, 35);
             this.buttonGenerate.TabIndex = 44;
@@ -529,12 +427,133 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ContextMenuStrip = this.contextMenuStripOnPicBox;
             this.pictureBox1.Location = new System.Drawing.Point(319, 256);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(729, 391);
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // contextMenuStripOnPicBox
+            // 
+            this.contextMenuStripOnPicBox.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStripOnPicBox.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.字幕字体ToolStripMenuItem,
+            this.线型ToolStripMenuItem});
+            this.contextMenuStripOnPicBox.Name = "contextMenuStripOnPicBox";
+            this.contextMenuStripOnPicBox.Size = new System.Drawing.Size(153, 64);
+            this.contextMenuStripOnPicBox.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStripOnPicBox_Opening);
+            // 
+            // 字幕字体ToolStripMenuItem
+            // 
+            this.字幕字体ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hershySimpleToolStripMenuItem,
+            this.hersheyPlainToolStripMenuItem,
+            this.hersheyDuplexToolStripMenuItem,
+            this.hersheyComplexToolStripMenuItem,
+            this.hersheyTriplexToolStripMenuItem,
+            this.hersheyComplexSmallToolStripMenuItem,
+            this.hersheyScriptSimplexToolStripMenuItem,
+            this.hersheyScriptComplexToolStripMenuItem});
+            this.字幕字体ToolStripMenuItem.Name = "字幕字体ToolStripMenuItem";
+            this.字幕字体ToolStripMenuItem.Size = new System.Drawing.Size(152, 30);
+            this.字幕字体ToolStripMenuItem.Text = "字幕字体";
+            // 
+            // hershySimpleToolStripMenuItem
+            // 
+            this.hershySimpleToolStripMenuItem.Name = "hershySimpleToolStripMenuItem";
+            this.hershySimpleToolStripMenuItem.Size = new System.Drawing.Size(306, 34);
+            this.hershySimpleToolStripMenuItem.Text = "HershySimplex";
+            this.hershySimpleToolStripMenuItem.Click += new System.EventHandler(this.hershySimpleToolStripMenuItem_Click);
+            // 
+            // hersheyPlainToolStripMenuItem
+            // 
+            this.hersheyPlainToolStripMenuItem.Name = "hersheyPlainToolStripMenuItem";
+            this.hersheyPlainToolStripMenuItem.Size = new System.Drawing.Size(306, 34);
+            this.hersheyPlainToolStripMenuItem.Text = "HersheyPlain";
+            this.hersheyPlainToolStripMenuItem.Click += new System.EventHandler(this.hersheyPlainToolStripMenuItem_Click);
+            // 
+            // hersheyDuplexToolStripMenuItem
+            // 
+            this.hersheyDuplexToolStripMenuItem.Name = "hersheyDuplexToolStripMenuItem";
+            this.hersheyDuplexToolStripMenuItem.Size = new System.Drawing.Size(306, 34);
+            this.hersheyDuplexToolStripMenuItem.Text = "HersheyDuplex";
+            this.hersheyDuplexToolStripMenuItem.Click += new System.EventHandler(this.hersheyDuplexToolStripMenuItem_Click);
+            // 
+            // hersheyComplexToolStripMenuItem
+            // 
+            this.hersheyComplexToolStripMenuItem.Name = "hersheyComplexToolStripMenuItem";
+            this.hersheyComplexToolStripMenuItem.Size = new System.Drawing.Size(306, 34);
+            this.hersheyComplexToolStripMenuItem.Text = "HersheyComplex";
+            this.hersheyComplexToolStripMenuItem.Click += new System.EventHandler(this.hersheyComplexToolStripMenuItem_Click);
+            // 
+            // hersheyTriplexToolStripMenuItem
+            // 
+            this.hersheyTriplexToolStripMenuItem.Name = "hersheyTriplexToolStripMenuItem";
+            this.hersheyTriplexToolStripMenuItem.Size = new System.Drawing.Size(306, 34);
+            this.hersheyTriplexToolStripMenuItem.Text = "HersheyTriplex";
+            this.hersheyTriplexToolStripMenuItem.Click += new System.EventHandler(this.hersheyTriplexToolStripMenuItem_Click);
+            // 
+            // hersheyComplexSmallToolStripMenuItem
+            // 
+            this.hersheyComplexSmallToolStripMenuItem.Name = "hersheyComplexSmallToolStripMenuItem";
+            this.hersheyComplexSmallToolStripMenuItem.Size = new System.Drawing.Size(306, 34);
+            this.hersheyComplexSmallToolStripMenuItem.Text = "HersheyComplexSmall";
+            this.hersheyComplexSmallToolStripMenuItem.Click += new System.EventHandler(this.hersheyComplexSmallToolStripMenuItem_Click);
+            // 
+            // hersheyScriptSimplexToolStripMenuItem
+            // 
+            this.hersheyScriptSimplexToolStripMenuItem.Name = "hersheyScriptSimplexToolStripMenuItem";
+            this.hersheyScriptSimplexToolStripMenuItem.Size = new System.Drawing.Size(306, 34);
+            this.hersheyScriptSimplexToolStripMenuItem.Text = "HersheyScriptSimplex";
+            this.hersheyScriptSimplexToolStripMenuItem.Click += new System.EventHandler(this.hersheyScriptSimplexToolStripMenuItem_Click);
+            // 
+            // hersheyScriptComplexToolStripMenuItem
+            // 
+            this.hersheyScriptComplexToolStripMenuItem.Name = "hersheyScriptComplexToolStripMenuItem";
+            this.hersheyScriptComplexToolStripMenuItem.Size = new System.Drawing.Size(306, 34);
+            this.hersheyScriptComplexToolStripMenuItem.Text = "HersheyScriptComplex";
+            this.hersheyScriptComplexToolStripMenuItem.Click += new System.EventHandler(this.hersheyScriptComplexToolStripMenuItem_Click);
+            // 
+            // 线型ToolStripMenuItem
+            // 
+            this.线型ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filledToolStripMenuItem,
+            this.fourConnectedToolStripMenuItem,
+            this.eghitConnectedToolStripMenuItem,
+            this.antiAliasToolStripMenuItem});
+            this.线型ToolStripMenuItem.Name = "线型ToolStripMenuItem";
+            this.线型ToolStripMenuItem.Size = new System.Drawing.Size(152, 30);
+            this.线型ToolStripMenuItem.Text = "线型";
+            // 
+            // filledToolStripMenuItem
+            // 
+            this.filledToolStripMenuItem.Name = "filledToolStripMenuItem";
+            this.filledToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.filledToolStripMenuItem.Text = "Filled";
+            this.filledToolStripMenuItem.Click += new System.EventHandler(this.filledToolStripMenuItem_Click);
+            // 
+            // fourConnectedToolStripMenuItem
+            // 
+            this.fourConnectedToolStripMenuItem.Name = "fourConnectedToolStripMenuItem";
+            this.fourConnectedToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.fourConnectedToolStripMenuItem.Text = "FourConnected";
+            this.fourConnectedToolStripMenuItem.Click += new System.EventHandler(this.fourConnectedToolStripMenuItem_Click);
+            // 
+            // eghitConnectedToolStripMenuItem
+            // 
+            this.eghitConnectedToolStripMenuItem.Name = "eghitConnectedToolStripMenuItem";
+            this.eghitConnectedToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.eghitConnectedToolStripMenuItem.Text = "EghitConnected";
+            this.eghitConnectedToolStripMenuItem.Click += new System.EventHandler(this.eghitConnectedToolStripMenuItem_Click);
+            // 
+            // antiAliasToolStripMenuItem
+            // 
+            this.antiAliasToolStripMenuItem.Name = "antiAliasToolStripMenuItem";
+            this.antiAliasToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.antiAliasToolStripMenuItem.Text = "AntiAlias";
+            this.antiAliasToolStripMenuItem.Click += new System.EventHandler(this.antiAliasToolStripMenuItem_Click);
             // 
             // progressBar
             // 
@@ -625,11 +644,34 @@
             this.buttonAudio.UseVisualStyleBackColor = true;
             this.buttonAudio.Click += new System.EventHandler(this.buttonAudio_Click);
             // 
+            // buttonColor
+            // 
+            this.buttonColor.Location = new System.Drawing.Point(954, 165);
+            this.buttonColor.Name = "buttonColor";
+            this.buttonColor.Size = new System.Drawing.Size(94, 30);
+            this.buttonColor.TabIndex = 57;
+            this.buttonColor.Text = "选择颜色";
+            this.buttonColor.UseVisualStyleBackColor = true;
+            this.buttonColor.Click += new System.EventHandler(this.buttonColor_Click);
+            // 
+            // labelSub
+            // 
+            this.labelSub.AutoSize = true;
+            this.labelSub.BackColor = System.Drawing.Color.Transparent;
+            this.labelSub.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelSub.Location = new System.Drawing.Point(805, 606);
+            this.labelSub.Name = "labelSub";
+            this.labelSub.Size = new System.Drawing.Size(44, 18);
+            this.labelSub.TabIndex = 58;
+            this.labelSub.Text = "test";
+            // 
             // VideoHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 747);
+            this.ClientSize = new System.Drawing.Size(1325, 747);
+            this.Controls.Add(this.labelSub);
+            this.Controls.Add(this.buttonColor);
             this.Controls.Add(this.buttonAudio);
             this.Controls.Add(this.lblPosition);
             this.Controls.Add(this.buttonStop);
@@ -645,20 +687,10 @@
             this.Controls.Add(this.labelBN);
             this.Controls.Add(this.labelGN);
             this.Controls.Add(this.labelRN);
-            this.Controls.Add(this.labelB);
-            this.Controls.Add(this.labelG);
-            this.Controls.Add(this.labelR);
-            this.Controls.Add(this.trackBarR);
-            this.Controls.Add(this.trackBarB);
-            this.Controls.Add(this.trackBarG);
-            this.Controls.Add(this.labelLineType);
-            this.Controls.Add(this.comboBoxLineType);
             this.Controls.Add(this.labelThickness);
             this.Controls.Add(this.textBoxThickness);
             this.Controls.Add(this.labelScale);
             this.Controls.Add(this.textBoxScale);
-            this.Controls.Add(this.labelFont);
-            this.Controls.Add(this.comboBoxFont);
             this.Controls.Add(this.labelY);
             this.Controls.Add(this.labelX);
             this.Controls.Add(this.textBoxSubtitlePositionY);
@@ -683,7 +715,6 @@
             this.Controls.Add(this.buttonChooseVideo);
             this.Controls.Add(this.radioButtonChooseBoth);
             this.Controls.Add(this.radioButtonChooseVideo);
-            this.MaximumSize = new System.Drawing.Size(1138, 803);
             this.MinimumSize = new System.Drawing.Size(1138, 803);
             this.Name = "VideoHelper";
             this.Text = "VideoHelper";
@@ -692,10 +723,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPerson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBeginTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarEndTime)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBarR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStripOnPicBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBarAudioPlayer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -730,20 +759,10 @@
         private System.Windows.Forms.Label labelX;
         private System.Windows.Forms.Label labelY;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
-        private System.Windows.Forms.ComboBox comboBoxFont;
-        private System.Windows.Forms.Label labelFont;
         private System.Windows.Forms.TextBox textBoxScale;
         private System.Windows.Forms.Label labelScale;
         private System.Windows.Forms.TextBox textBoxThickness;
         private System.Windows.Forms.Label labelThickness;
-        private System.Windows.Forms.ComboBox comboBoxLineType;
-        private System.Windows.Forms.Label labelLineType;
-        private System.Windows.Forms.TrackBar trackBarG;
-        private System.Windows.Forms.TrackBar trackBarB;
-        private System.Windows.Forms.TrackBar trackBarR;
-        private System.Windows.Forms.Label labelR;
-        private System.Windows.Forms.Label labelG;
-        private System.Windows.Forms.Label labelB;
         private System.Windows.Forms.Label labelRN;
         private System.Windows.Forms.Label labelGN;
         private System.Windows.Forms.Label labelBN;
@@ -760,5 +779,23 @@
         private System.Windows.Forms.Button buttonStop;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Button buttonAudio;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripOnPicBox;
+        private System.Windows.Forms.ToolStripMenuItem 字幕字体ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hershySimpleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hersheyPlainToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hersheyDuplexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hersheyComplexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hersheyTriplexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hersheyComplexSmallToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hersheyScriptSimplexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hersheyScriptComplexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 线型ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filledToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fourConnectedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eghitConnectedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem antiAliasToolStripMenuItem;
+        private System.Windows.Forms.ColorDialog colorDialogSubtitle;
+        private System.Windows.Forms.Button buttonColor;
+        private System.Windows.Forms.Label labelSub;
     }
 }
