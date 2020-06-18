@@ -43,6 +43,8 @@ namespace Video_generator
             this.labelSub.BackColor = Color.Transparent;
             //this.labelSub.Parent = pictureBox1;
             pictureBox1.Controls.Add(labelSub);
+            modeVideoToolStripMenuItem.Checked = true;
+            importAudioFileToolStripMenuItem.Enabled = false;
             this.labelSub.Location = new Point(0,0);
             if (File.Exists(info.mixed))
             {
@@ -58,7 +60,6 @@ namespace Video_generator
             if (!File.Exists("ffmpeg.exe")) {
                 FFmpegDownloader.GetLatestVersion(FFmpegVersion.Full);
             }
-
         }
 
         private void VideoHelper_Load(object sender, EventArgs e)
@@ -80,90 +81,6 @@ namespace Video_generator
                 labelSub.Location = new Point(m_lastPoint.X + Control.MousePosition.X - m_lastMPoint.X, m_lastPoint.Y + Control.MousePosition.Y - m_lastMPoint.Y);
             }
         
-        }
-
-        private void radioButtonChooseVideo_CheckedChanged(object sender, EventArgs e)
-        {
-            buttonChooseAudio.Enabled = false;
-            if (info.VideoPath != null && info.subtitles != null) {
-                info.AudioPath = info.bgmTemp;
-                Merge.MixBgmAndSpeech(info);
-            }
-        }
-
-        private void radioButtonChooseBoth_CheckedChanged(object sender, EventArgs e)
-        {
-            buttonChooseAudio.Enabled = true;
-            info.AudioPath = null;
-        }
-
-        private async void buttonChooseVideo_Click(object sender, EventArgs e)
-        {
-            openFileDialog.FileName = "";
-            openFileDialog.Filter = "mp4文件|*.mp4|avi文件|*avi|所有文件|*.*";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                info.VideoPath = openFileDialog.FileName;
-                labelVideoPath.Text = openFileDialog.SafeFileName;
-                trackBarBeginTime.Maximum = (int)await Info.GetMediaTime(info.VideoPath);
-                buttonMakeSure.Enabled = true;
-                if (trackBarBeginTime.Maximum == 0)
-                {
-                    MessageBox.Show("无法读取视频长度，长度调节暂不可用");
-                }
-                Task a = new Task(new Action(() => {
-                    Split.ExtractAudio(info);
-                }));
-                a.Start();
-                a.Wait();
-                VideoCapture cap = new VideoCapture(info.VideoPath);
-                pictureBox1.CreateGraphics().DrawImage(cap.QueryFrame().ToBitmap(), new System.Drawing.Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height)) ;
-                cap.Dispose();
-                if (radioButtonChooseVideo.Checked&&info.subtitles!=null) {
-                    info.AudioPath = info.bgmTemp;
-                    Merge.MixBgmAndSpeech(info);
-                }
-
-            }
-        }
-
-        private void buttonChooseAudio_Click(object sender, EventArgs e)
-        {
-            openFileDialog.FileName = "";
-            openFileDialog.Filter = "mp3文件|*.mp3|所有文件|*.*";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                info.AudioPath = openFileDialog.FileName;
-                labelChooseAudio.Text = openFileDialog.SafeFileName;
-
-            }
-            if (info.subtitles != null) {
-                Merge.MixBgmAndSpeech(info);
-            }
-        }
-
-        private void buttonChooseSubtitle_Click(object sender, EventArgs e)
-        {
-            openFileDialog.FileName = "";
-            openFileDialog.Filter = "srt文件|*.srt";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                info.SubtitlePath = openFileDialog.FileName;
-                info.subtitles = SubtitleOption.ParseSubtitle(info.SubtitlePath);
-                labelChooseSubtitle.Text = openFileDialog.SafeFileName;
-                TTS.CreateSpeechFile(TTS.SubtitleToXml(info.subtitles), info.speechTemp);
-            }
-            if (radioButtonChooseVideo.Checked)
-            {
-
-                info.AudioPath = info.bgmTemp;
-
-            }
-            else {
-                if (info.AudioPath == null) return;
-            }
-            Merge.MixBgmAndSpeech(info);
-
         }
 
         private void trackBarBgm_Scroll(object sender, EventArgs e)
@@ -210,12 +127,12 @@ namespace Video_generator
                         MessageBox.Show("请选择视频文件");
                         return;
                     }
-                    if (radioButtonChooseBoth.Checked && (info.AudioPath == null)) {
+                    if (modeBothToolStripMenuItem.Checked && (info.AudioPath == null)) {
                         MessageBox.Show("请选择音频文件");
                         return;
                     }
                     info.output = saveFileDialog.FileName;
-                    if (radioButtonChooseVideo.Checked)
+                    if (modeVideoToolStripMenuItem.Checked)
                     {
 
                         info.AudioPath = info.bgmTemp;
@@ -517,6 +434,155 @@ namespace Video_generator
                 info.B = colorDialogSubtitle.Color.B;
                 buttonColor.BackColor = colorDialogSubtitle.Color;
             }
+        }
+
+        private void modeVideoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modeVideoToolStripMenuItem.Checked = true;
+            modeBothToolStripMenuItem.Checked = false;
+            importAudioFileToolStripMenuItem.Enabled = false;
+            if (info.VideoPath != null && info.subtitles != null)
+            {
+                info.AudioPath = info.bgmTemp;
+                Merge.MixBgmAndSpeech(info);
+            }
+        }
+
+        private async void importVideoFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog.FileName = "";
+            openFileDialog.Filter = "mp4文件|*.mp4|avi文件|*avi|所有文件|*.*";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                info.VideoPath = openFileDialog.FileName;
+                labelVideoPath.Text = openFileDialog.SafeFileName;
+                trackBarBeginTime.Maximum = (int)await Info.GetMediaTime(info.VideoPath);
+                buttonMakeSure.Enabled = true;
+                if (trackBarBeginTime.Maximum == 0)
+                {
+                    MessageBox.Show("无法读取视频长度，长度调节暂不可用");
+                }
+                Task a = new Task(new Action(() => {
+                    Split.ExtractAudio(info);
+                }));
+                a.Start();
+                a.Wait();
+                VideoCapture cap = new VideoCapture(info.VideoPath);
+                pictureBox1.CreateGraphics().DrawImage(cap.QueryFrame().ToBitmap(), new System.Drawing.Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
+                cap.Dispose();
+                if (modeVideoToolStripMenuItem.Checked && info.subtitles != null)
+                {
+                    info.AudioPath = info.bgmTemp;
+                    Merge.MixBgmAndSpeech(info);
+                }
+
+            }
+        }
+
+        private void importAudioFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog.FileName = "";
+            openFileDialog.Filter = "mp3文件|*.mp3|所有文件|*.*";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                info.AudioPath = openFileDialog.FileName;
+                labelChooseAudio.Text = openFileDialog.SafeFileName;
+
+            }
+            if (info.subtitles != null)
+            {
+                Merge.MixBgmAndSpeech(info);
+            }
+        }
+
+        private void importSubtitleFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog.FileName = "";
+            openFileDialog.Filter = "srt文件|*.srt";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                info.SubtitlePath = openFileDialog.FileName;
+                info.subtitles = SubtitleOption.ParseSubtitle(info.SubtitlePath);
+                labelChooseSubtitle.Text = openFileDialog.SafeFileName;
+                TTS.CreateSpeechFile(TTS.SubtitleToXml(info.subtitles), info.speechTemp);
+            }
+            if (modeVideoToolStripMenuItem.Checked)
+            {
+
+                info.AudioPath = info.bgmTemp;
+
+            }
+            else
+            {
+                if (info.AudioPath == null) return;
+            }
+            Merge.MixBgmAndSpeech(info);
+
+        }
+
+        private void modeBothToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modeBothToolStripMenuItem.Checked = true;
+            modeVideoToolStripMenuItem.Checked = false;
+            importAudioFileToolStripMenuItem.Enabled = true;
+            info.AudioPath = null;
+        }
+
+        private void generateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (buttonStop.Enabled)
+            {
+                StopAction();
+                buttonPlay.Enabled = false;
+                buttonPause.Enabled = false;
+                buttonStop.Enabled = false;
+                trackBarBgm.Enabled = true;
+                trackBarPerson.Enabled = true;
+            }
+
+            saveFileDialog.Filter = "mp4文件|*.mp4";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                if (info.subtitles == null)
+                {
+                    MessageBox.Show("请选择字幕文件");
+                    return;
+                }
+                if (info.VideoPath == null)
+                {
+                    MessageBox.Show("请选择视频文件");
+                    return;
+                }
+                if (modeBothToolStripMenuItem.Checked && (info.AudioPath == null))
+                {
+                    MessageBox.Show("请选择音频文件");
+                    return;
+                }
+                info.output = saveFileDialog.FileName;
+                if (modeVideoToolStripMenuItem.Checked)
+                {
+
+                    info.AudioPath = info.bgmTemp;
+
+                }
+                progressBar.Value = 0;
+                labelProgress.Text = "";
+                labelState.Text = "";
+                Merge.progressdelegate = new Merge.progressDelegate(refreshProgressBar);
+                Merge.progressstate = new Merge.progressState(refreshProgressState);
+                Task.Run(new Action(() => {
+                    Merge.MergeAll(info);
+                }));
+                GC.Collect();
+
+
+            }
+        }
+
+        private void buttonPlay_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 

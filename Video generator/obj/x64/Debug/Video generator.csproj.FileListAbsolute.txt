@@ -55,3 +55,64 @@ C:\Users\tp103\Desktop\Video generator\bin\x64\Debug\zh-cn\ZedGraph.resources.dl
 C:\Users\tp103\Desktop\Video generator\bin\x64\Debug\zh-tw\ZedGraph.resources.dll
 C:\Users\tp103\Desktop\Video generator\obj\x64\Debug\Video_generator.VideoHelper.resources
 C:\Users\tp103\Desktop\Video generator\obj\x64\Debug\Video generator.csprojAssemblyReference.cache
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Microsoft.CognitiveServices.Speech.core.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Microsoft.CognitiveServices.Speech.extension.kws.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Microsoft.CognitiveServices.Speech.extension.codec.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\x64\concrt140.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\x64\cvextern.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\x64\msvcp140.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\x64\msvcp140_1.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\x64\msvcp140_2.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\x64\msvcp140_codecvt_ids.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\x64\opencv_videoio_ffmpeg420_64.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\x64\vcruntime140.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\x64\vcruntime140_1.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Video generator.exe.config
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Video generator.exe
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Video generator.pdb
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Emgu.CV.UI.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Emgu.CV.World.NetStandard.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\ImageProcessingDemo1.exe
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Microsoft.CognitiveServices.Speech.csharp.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\NAudio.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Newtonsoft.Json.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Xabe.FFmpeg.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Xabe.FFmpeg.Downloader.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\ZedGraph.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\ImageProcessingDemo1.pdb
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\ImageProcessingDemo1.exe.config
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Emgu.CV.UI.xml
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Emgu.CV.World.NetStandard.xml
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Microsoft.CognitiveServices.Speech.csharp.xml
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\NAudio.xml
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Newtonsoft.Json.xml
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Xabe.FFmpeg.xml
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Xabe.FFmpeg.Downloader.xml
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\ZedGraph.xml
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\de\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\es\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\fr\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\hu\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\it\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\ja\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\pt\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\ru\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\sk\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\sv\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\tr\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\zh-cn\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\zh-tw\ZedGraph.resources.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\Interop.WMPLib.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\bin\x64\Debug\AxInterop.WMPLib.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.csprojAssemblyReference.cache
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Interop.WMPLib.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\AxInterop.WMPLib.dll
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.csproj.ResolveComReference.cache
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video_generator.Properties.Resources.resources
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video_generator.Start.resources
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video_generator.VideoHelper.resources
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.csproj.GenerateResource.cache
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.csproj.CoreCompileInputs.cache
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.csproj.CopyComplete
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.exe
+E:\大二下\C#大作业\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.pdb
