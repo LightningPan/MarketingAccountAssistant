@@ -94,6 +94,7 @@
             this.lblAudioFile = new System.Windows.Forms.Label();
             this.tabPageSubtitleSettings = new System.Windows.Forms.TabPage();
             this.lblSubtitleFile = new System.Windows.Forms.Label();
+            this.tabPageProgress = new System.Windows.Forms.TabPage();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importVideoFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,7 +105,6 @@
             this.modeBothToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tabPageProgress = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBgm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBeginTime)).BeginInit();
@@ -116,8 +116,8 @@
             this.tabPageVideoSettings.SuspendLayout();
             this.tabPageAudioSettings.SuspendLayout();
             this.tabPageSubtitleSettings.SuspendLayout();
-            this.menuStrip.SuspendLayout();
             this.tabPageProgress.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelVideoPath
@@ -271,7 +271,7 @@
             // 
             // textBoxSubtitlePositionX
             // 
-            this.textBoxSubtitlePositionX.Location = new System.Drawing.Point(238, 85);
+            this.textBoxSubtitlePositionX.Location = new System.Drawing.Point(560, 113);
             this.textBoxSubtitlePositionX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSubtitlePositionX.Name = "textBoxSubtitlePositionX";
             this.textBoxSubtitlePositionX.Size = new System.Drawing.Size(87, 28);
@@ -281,7 +281,7 @@
             // 
             // textBoxSubtitlePositionY
             // 
-            this.textBoxSubtitlePositionY.Location = new System.Drawing.Point(108, 85);
+            this.textBoxSubtitlePositionY.Location = new System.Drawing.Point(322, 113);
             this.textBoxSubtitlePositionY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSubtitlePositionY.Name = "textBoxSubtitlePositionY";
             this.textBoxSubtitlePositionY.Size = new System.Drawing.Size(87, 28);
@@ -292,7 +292,7 @@
             // labelX
             // 
             this.labelX.AutoSize = true;
-            this.labelX.Location = new System.Drawing.Point(87, 60);
+            this.labelX.Location = new System.Drawing.Point(423, 116);
             this.labelX.Name = "labelX";
             this.labelX.Size = new System.Drawing.Size(89, 18);
             this.labelX.TabIndex = 25;
@@ -302,7 +302,7 @@
             // labelY
             // 
             this.labelY.AutoSize = true;
-            this.labelY.Location = new System.Drawing.Point(235, 60);
+            this.labelY.Location = new System.Drawing.Point(682, 116);
             this.labelY.Name = "labelY";
             this.labelY.Size = new System.Drawing.Size(89, 18);
             this.labelY.TabIndex = 26;
@@ -392,10 +392,10 @@
             // pictureBox1
             // 
             this.pictureBox1.ContextMenuStrip = this.contextMenuStripOnPicBox;
-            this.pictureBox1.Location = new System.Drawing.Point(111, 256);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 243);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(843, 438);
+            this.pictureBox1.Size = new System.Drawing.Size(1005, 457);
             this.pictureBox1.TabIndex = 46;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -632,7 +632,7 @@
             this.labelSub.AutoSize = true;
             this.labelSub.BackColor = System.Drawing.Color.Transparent;
             this.labelSub.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSub.Location = new System.Drawing.Point(821, 709);
+            this.labelSub.Location = new System.Drawing.Point(809, 543);
             this.labelSub.Name = "labelSub";
             this.labelSub.Size = new System.Drawing.Size(44, 18);
             this.labelSub.TabIndex = 58;
@@ -744,6 +744,19 @@
             this.lblSubtitleFile.TabIndex = 73;
             this.lblSubtitleFile.Text = "字幕文件";
             // 
+            // tabPageProgress
+            // 
+            this.tabPageProgress.Controls.Add(this.progressBar);
+            this.tabPageProgress.Controls.Add(this.labelState);
+            this.tabPageProgress.Controls.Add(this.labelProgress);
+            this.tabPageProgress.Location = new System.Drawing.Point(4, 28);
+            this.tabPageProgress.Name = "tabPageProgress";
+            this.tabPageProgress.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageProgress.Size = new System.Drawing.Size(1025, 168);
+            this.tabPageProgress.TabIndex = 3;
+            this.tabPageProgress.Text = "进度";
+            this.tabPageProgress.UseVisualStyleBackColor = true;
+            // 
             // menuStrip
             // 
             this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
@@ -755,7 +768,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(1074, 32);
+            this.menuStrip.Size = new System.Drawing.Size(1070, 32);
             this.menuStrip.TabIndex = 68;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -827,24 +840,11 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // tabPageProgress
-            // 
-            this.tabPageProgress.Controls.Add(this.progressBar);
-            this.tabPageProgress.Controls.Add(this.labelState);
-            this.tabPageProgress.Controls.Add(this.labelProgress);
-            this.tabPageProgress.Location = new System.Drawing.Point(4, 28);
-            this.tabPageProgress.Name = "tabPageProgress";
-            this.tabPageProgress.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProgress.Size = new System.Drawing.Size(1025, 168);
-            this.tabPageProgress.TabIndex = 3;
-            this.tabPageProgress.Text = "进度";
-            this.tabPageProgress.UseVisualStyleBackColor = true;
-            // 
             // VideoHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 892);
+            this.ClientSize = new System.Drawing.Size(1070, 744);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.tabControlSettings);
             this.Controls.Add(this.labelSub);
@@ -855,7 +855,8 @@
             this.Controls.Add(this.labelRN);
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1092, 937);
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1092, 800);
             this.Name = "VideoHelper";
             this.Text = "VideoHelper";
             this.Load += new System.EventHandler(this.VideoHelper_Load);
@@ -873,10 +874,10 @@
             this.tabPageAudioSettings.PerformLayout();
             this.tabPageSubtitleSettings.ResumeLayout(false);
             this.tabPageSubtitleSettings.PerformLayout();
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
             this.tabPageProgress.ResumeLayout(false);
             this.tabPageProgress.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

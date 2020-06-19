@@ -1,6 +1,7 @@
 ﻿using Emgu.CV.CvEnum;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Threading.Tasks;
 using Xabe.FFmpeg;
 
@@ -27,6 +28,10 @@ namespace Video_generator
         public LineType lineType { get; set; }
 
         public string output { get; set; }
+        public int height { get;  set; }
+        public int width { get; set; }
+
+        public Bitmap bmp;
 
 
         public string bgmTemp = "bgm.wav";
@@ -41,6 +46,13 @@ namespace Video_generator
 
             IMediaInfo Info = await FFmpeg.GetMediaInfo(mediaPath);
             return Info.Duration.TotalSeconds;
+        }
+        public Info(int Width,int Height)
+        {
+
+            bmp = new Bitmap(Width, Height);
+            Graphics g = Graphics.FromImage(bmp);
+            g.FillRectangle(Brushes.Black, new Rectangle(0, 0, Width, Height));
         }
     }
 }

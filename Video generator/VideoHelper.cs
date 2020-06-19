@@ -24,25 +24,29 @@ namespace Video_generator
         public VideoHelper()
         {
             InitializeComponent();
-            info = new Info();
+            info = new Info(pictureBox1.Width,pictureBox1.Height);
+          
+           
             this.labelBgmVolume.DataBindings.Add("Text", trackBarBgm, "Value");
             this.labelPersonVolume.DataBindings.Add("Text", trackBarPerson, "Value");
             this.labelEndTime.DataBindings.Add("Text", trackBarEndTime, "Value");
             this.labelBeginTime.DataBindings.Add("Text", trackBarBeginTime, "Value");
             this.trackBarEndTime.DataBindings.Add("Minimum", trackBarBeginTime, "Value");
             this.trackBarEndTime.DataBindings.Add("Maximum", trackBarBeginTime, "Maximum");
-            this.textBoxSubtitlePositionX.DataBindings.Add("Text", info, "X");
-            this.textBoxSubtitlePositionY.DataBindings.Add("Text", info, "Y");
             this.textBoxThickness.DataBindings.Add("Text", info, "thickness");
             this.textBoxScale.DataBindings.Add("Text", info, "scale");
             this.trackBarBeginTime.DataBindings.Add("Value", info, "BeginTime");
             this.trackBarEndTime.DataBindings.Add("Value", info, "EndTime");
+            this.textBoxSubtitlePositionX.DataBindings.Add("Text",info,"X");
+            this.textBoxSubtitlePositionY.DataBindings.Add("Text",info,"Y");
             this.pictureBox1.BackColor = Color.Black;
             this.labelSub.MouseDown += new MouseEventHandler(labelSub_MouseDown);
             this.labelSub.MouseMove += new MouseEventHandler(labelSub_MouseMove);
-            this.labelSub.BackColor = Color.Transparent;
+            this.labelSub.MouseUp += new MouseEventHandler(labelSub_MouseUp);
             //this.labelSub.Parent = pictureBox1;
+            pictureBox1.Image = info.bmp;
             pictureBox1.Controls.Add(labelSub);
+            this.labelSub.BackColor = Color.White;
             modeVideoToolStripMenuItem.Checked = true;
             importAudioFileToolStripMenuItem.Enabled = false;
             this.labelSub.Location = new Point(0,0);
@@ -64,9 +68,18 @@ namespace Video_generator
 
         private void VideoHelper_Load(object sender, EventArgs e)
         {
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer |
+                ControlStyles.ResizeRedraw | ControlStyles.AllPaintingInWmPaint, true);
 
         }
 
+        private void labelSub_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox1.CreateGraphics().DrawImage(info.bmp, new System.Drawing.Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
+            //textBoxSubtitlePositionX.Text= (Control.MousePosition.X / pictureBox1.Width * info.width).ToString();
+            //textBoxSubtitlePositionY.Text=(Control.MousePosition.Y / pictureBox1.Height * info.height).ToString();
+            
+        }
 
         private void labelSub_MouseDown(object sender, MouseEventArgs e) {
             m_lastMPoint = Control.MousePosition;
@@ -79,6 +92,11 @@ namespace Video_generator
             if (e.Button == MouseButtons.Left)
             {
                 labelSub.Location = new Point(m_lastPoint.X + Control.MousePosition.X - m_lastMPoint.X, m_lastPoint.Y + Control.MousePosition.Y - m_lastMPoint.Y);
+                pictureBox1.CreateGraphics().DrawImage(info.bmp, new System.Drawing.Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
+                info.X = (m_lastPoint.X + Control.MousePosition.X - m_lastMPoint.X ) * info.width / pictureBox1.Width;
+                info.Y = (m_lastPoint.Y + Control.MousePosition.Y - m_lastMPoint.Y) * info.height / pictureBox1.Height;
+                textBoxSubtitlePositionX.Text = info.X.ToString();
+                textBoxSubtitlePositionY.Text = info.Y.ToString();
             }
         
         }
@@ -206,13 +224,18 @@ namespace Video_generator
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (info.VideoPath == null) return;
-            VideoCapture cap = new VideoCapture(info.VideoPath);
-            Mat mat = new Mat();
-            cap.Read(mat);
-            CvInvoke.PutText(mat, "Test", new Point(info.X,info.Y), info.fontFace, info.scale, new Bgr(info.B,info.G,info.R).MCvScalar, info.thickness, info.lineType, false);
-            pictureBox1.CreateGraphics().DrawImage(mat.ToBitmap(), new System.Drawing.Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
-            cap.Dispose();
+            try { labelSub.Location = new Point(info.X * pictureBox1.Width / info.width , info.Y * pictureBox1.Height / info.height ); }
+            catch (Exception) {
+                
+            }
+            //labelSub.Refresh();
+            //if (info.VideoPath == null) return;
+            //VideoCapture cap = new VideoCapture(info.VideoPath);
+            //Mat mat = new Mat();
+            //cap.Read(mat);
+            //CvInvoke.PutText(mat, "Test", new Point(info.X,info.Y), info.fontFace, info.scale, new Bgr(info.B,info.G,info.R).MCvScalar, info.thickness, info.lineType, false);
+            //pictureBox1.CreateGraphics().DrawImage(mat.ToBitmap(), new System.Drawing.Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
+            //cap.Dispose();
 
 
         }
@@ -468,7 +491,10 @@ namespace Video_generator
                 a.Start();
                 a.Wait();
                 VideoCapture cap = new VideoCapture(info.VideoPath);
-                pictureBox1.CreateGraphics().DrawImage(cap.QueryFrame().ToBitmap(), new System.Drawing.Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
+                info.width = (int)cap.GetCaptureProperty(CapProp.FrameWidth);
+                info.height = (int)cap.GetCaptureProperty(CapProp.FrameHeight);
+                info.bmp = cap.QueryFrame().ToBitmap();
+                pictureBox1.CreateGraphics().DrawImage(info.bmp, new System.Drawing.Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height));
                 cap.Dispose();
                 if (modeVideoToolStripMenuItem.Checked && info.subtitles != null)
                 {

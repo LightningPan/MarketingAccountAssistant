@@ -177,3 +177,4 @@ C:\Users\tp103\github\MarketingAccountAssistant\Video generator\obj\x64\Debug\Vi
 C:\Users\tp103\github\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.csproj.CopyComplete
 C:\Users\tp103\github\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.exe
 C:\Users\tp103\github\MarketingAccountAssistant\Video generator\obj\x64\Debug\Video generator.pdb
+C:\Users\tp103\github\MarketingAccountAssistant\Video generator\bin\x64\Debug\CSkin.dll

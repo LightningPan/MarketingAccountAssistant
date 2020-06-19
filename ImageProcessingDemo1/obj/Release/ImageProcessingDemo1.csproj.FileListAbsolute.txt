@@ -1,0 +1,25 @@
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\bin\Release\ImageProcessingDemo1.exe.config
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\bin\Release\ImageProcessingDemo1.exe
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\bin\Release\ImageProcessingDemo1.pdb
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.csprojAssemblyReference.cache
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.Form1.resources
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.FrameControl.resources
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.Properties.Resources.resources
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.csproj.GenerateResource.cache
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.csproj.CoreCompileInputs.cache
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.exe
+C:\Users\tp103\Desktop\Video generator\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.pdb
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\bin\Release\ImageProcessingDemo1.exe.config
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\bin\Release\ImageProcessingDemo1.exe
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\bin\Release\ImageProcessingDemo1.pdb
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.FrameControl.resources
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.Properties.Resources.resources
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.csproj.GenerateResource.cache
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.csproj.CoreCompileInputs.cache
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.exe
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.pdb
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.Image.resources
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\bin\Release\CSkin.dll
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\bin\Release\CSkin.xml
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.csproj.CopyComplete
+C:\Users\75851\Desktop\网课\C#\Pro\ImageProcessingDemo1\ImageProcessingDemo1\obj\Release\ImageProcessingDemo1.csprojAssemblyReference.cache

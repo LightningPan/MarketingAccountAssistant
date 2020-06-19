@@ -100,7 +100,7 @@ namespace Video_generator
             string videoPath = info.videoTemp;
             string audioPath = info.mixed;
             //output = Path.ChangeExtension(, ".mp4");
-            var conversion=await FFmpeg.Conversions.FromSnippet.AddAudio(videoPath, audioPath, output+".mp4");
+            var conversion=await FFmpeg.Conversions.FromSnippet.AddAudio(videoPath, audioPath, output);
             //await Conversion.AddAudio(videoPath, audioPath, outputPath).Start();
             IConversionResult result = await conversion.Start();
             //return (output);

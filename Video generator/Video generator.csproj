@@ -167,7 +167,10 @@
     <Content Include="others\License-LGPL.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ImageProcessingDemo1\ImageProcessingDemo1\ImageProcessingDemo1.csproj">
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ImageProcessingDemo1\ImageProcessingDemo1.csproj">
       <Project>{5542db80-2f52-4dc7-827e-5e65067e0678}</Project>
       <Name>ImageProcessingDemo1</Name>
     </ProjectReference>
