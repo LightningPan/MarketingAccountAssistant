@@ -21,6 +21,14 @@ namespace Video_generator
     {
         Info info;
 
+        private IWavePlayer _device;
+        private AudioFileReader _reader;
+        private CancellationTokenSource _cts;
+        private bool _sliderLock; // 逻辑锁，当为true时不更新界面上的进度
+
+        private Point m_lastPoint;
+        private Point m_lastMPoint;
+
         public VideoHelper()
         {
             InitializeComponent();
@@ -86,8 +94,7 @@ namespace Video_generator
             m_lastPoint = (sender as Label).Location;
 
         }
-        private Point m_lastPoint;
-        private Point m_lastMPoint;
+
         private void labelSub_MouseMove(object sender, MouseEventArgs e) {
             if (e.Button == MouseButtons.Left)
             {
@@ -253,10 +260,7 @@ namespace Video_generator
         }
 
        
-        private IWavePlayer _device;
-        private AudioFileReader _reader;
-        private CancellationTokenSource _cts;
-        private bool _sliderLock; // 逻辑锁，当为true时不更新界面上的进度
+
 
         private void buttonStop_Click(object sender, EventArgs e)
         {

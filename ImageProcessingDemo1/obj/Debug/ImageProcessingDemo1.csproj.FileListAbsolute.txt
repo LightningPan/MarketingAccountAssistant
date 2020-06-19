@@ -34,3 +34,4 @@ C:\Users\tp103\github\MarketingAccountAssistant\ImageProcessingDemo1\obj\Debug\I
 C:\Users\tp103\github\MarketingAccountAssistant\ImageProcessingDemo1\obj\Debug\ImageProcessingDemo1.csproj.CopyComplete
 C:\Users\tp103\github\MarketingAccountAssistant\ImageProcessingDemo1\obj\Debug\ImageProcessingDemo1.exe
 C:\Users\tp103\github\MarketingAccountAssistant\ImageProcessingDemo1\obj\Debug\ImageProcessingDemo1.pdb
+C:\Users\tp103\github\MarketingAccountAssistant\ImageProcessingDemo1\obj\Debug\ImageProcessingDemo1.csprojAssemblyReference.cache

@@ -201,7 +201,7 @@ namespace ImageProcessingDemo1
             {
                 if (MessageBox.Show( "是否放弃当前文件", "当前文件未保存", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    Bitmap bitmap = PictureProcessing.OpenFile(openImageDialog.ShowDialog() == DialogResult.OK, openImageDialog.FileName);
+                    bitmap = PictureProcessing.OpenFile(openImageDialog.ShowDialog() == DialogResult.OK, openImageDialog.FileName);
                     imageManager.oldBitmap = bitmap.Clone() as Bitmap;
                     ConvertedImage.Image = bitmap;
                     bitmaps.Clear();
@@ -210,16 +210,27 @@ namespace ImageProcessingDemo1
             }
             else
             {
-
-                Bitmap bitmap = PictureProcessing.OpenFile(openImageDialog.ShowDialog() == DialogResult.OK, openImageDialog.FileName);
-                imageManager.oldBitmap = bitmap.Clone() as Bitmap;
-                ConvertedImage.Image = bitmap;
-                bitmaps.Clear();
-                bitmaps.Add(imageManager.oldBitmap);
-                编辑EToolStripMenuItem.Enabled = true;
-                工具TToolStripMenuItem.Enabled = true;
-                插入文本框ToolStripMenuItem.Enabled= true ;
-                SourceBtn.Visible = true;
+                
+                if (openImageDialog.ShowDialog() == DialogResult.OK) {
+                   bitmap = PictureProcessing.OpenFile(true,openImageDialog.FileName);
+                    imageManager.oldBitmap = bitmap.Clone() as Bitmap;
+                    ConvertedImage.Image = bitmap;
+                    bitmaps.Clear();
+                    bitmaps.Add(imageManager.oldBitmap);
+                    编辑EToolStripMenuItem.Enabled = true;
+                    工具TToolStripMenuItem.Enabled = true;
+                    插入文本框ToolStripMenuItem.Enabled = true;
+                    SourceBtn.Visible = true;
+                }
+                //Bitmap bitmap = PictureProcessing.OpenFile(openImageDialog.ShowDialog() == DialogResult.OK, openImageDialog.FileName);
+                //imageManager.oldBitmap = bitmap.Clone() as Bitmap;
+                //ConvertedImage.Image = bitmap;
+                //bitmaps.Clear();
+                //bitmaps.Add(imageManager.oldBitmap);
+                //编辑EToolStripMenuItem.Enabled = true;
+                //工具TToolStripMenuItem.Enabled = true;
+                //插入文本框ToolStripMenuItem.Enabled= true ;
+                //SourceBtn.Visible = true;
             }
 
         }
@@ -480,19 +491,40 @@ namespace ImageProcessingDemo1
 
         private void ChangeBtn_Click(object sender, EventArgs e)
         {
+            Task a;
             switch (flag)
             {
                 case 1:
-                    bitmap = PictureProcessing.DarkCorner(bitmap, CoefficientScrollBar.Value);
+                    a= new Task(new Action(() => {
+                        bitmap = PictureProcessing.DarkCorner(bitmap, CoefficientScrollBar.Value);
+                    }));
+                    a.Start();
+                    a.Wait();
+                    //bitmap = PictureProcessing.DarkCorner(bitmap, CoefficientScrollBar.Value);
                     break;
                 case 2:
-                    bitmap = PictureProcessing.BrightNess(bitmap, CoefficientScrollBar.Value);
+                    a = new Task(new Action(() => {
+                        PictureProcessing.BrightNess(bitmap, CoefficientScrollBar.Value);
+                    }));
+                    //PictureProcessing.BrightNess(bitmap, CoefficientScrollBar.Value);
+                    a.Start();
+                    a.Wait();
                     break;
                 case 3:
-                    bitmap = PictureProcessing.Spread(bitmap);
+                    a = new Task(new Action(() => {
+                        bitmap = PictureProcessing.Spread(bitmap);
+                    }));
+                    // bitmap = PictureProcessing.Spread(bitmap);
+                    a.Start();
+                    a.Wait();
                     break;
                 case 4:
-                    bitmap = PictureProcessing.Mosic(bitmap, CoefficientScrollBar.Value);
+                    a = new Task(new Action(() => {
+                        bitmap = PictureProcessing.Mosic(bitmap, CoefficientScrollBar.Value);
+                    }));
+                    //bitmap = PictureProcessing.Mosic(bitmap, CoefficientScrollBar.Value);
+                    a.Start();
+                    a.Wait();
                     break;
                 default:
                     flag = 0;
@@ -500,8 +532,14 @@ namespace ImageProcessingDemo1
             }
             if (flag != 0)
             {
-                ConvertedImage.Image = bitmap.Clone() as System.Drawing.Image;
-                bitmaps.Add(bitmap);
+                Task b = new Task(new Action(() => {
+                    ConvertedImage.Image = bitmap.Clone() as System.Drawing.Image;
+                    bitmaps.Add(bitmap);
+                }));
+                b.Start();
+                b.Wait();
+                //ConvertedImage.Image = bitmap.Clone() as System.Drawing.Image;
+               
             }
         }
 
