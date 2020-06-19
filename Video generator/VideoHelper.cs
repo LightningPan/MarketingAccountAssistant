@@ -206,7 +206,7 @@ namespace Video_generator
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if (info.VideoPath == "") return;
+            if (info.VideoPath == null) return;
             VideoCapture cap = new VideoCapture(info.VideoPath);
             Mat mat = new Mat();
             cap.Read(mat);
@@ -581,6 +581,11 @@ namespace Video_generator
         }
 
         private void buttonPlay_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void importToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
