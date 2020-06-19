@@ -243,6 +243,13 @@ namespace ImageProcessingDemo1
         }
             public Bitmap Mosic(Bitmap bitmap,int value)
         {
+
+            Task a=new Task(new Action(()=>{
+            
+            
+            
+            
+            }));
             if (bitmap != null)
             {
                 Bitmap newbitmap = bitmap.Clone() as Bitmap;

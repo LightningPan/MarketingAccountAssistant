@@ -339,7 +339,8 @@ namespace ImageProcessingDemo1
 
         private void 取反色ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bitmap = PictureProcessing.DeColor(bitmap);
+           
+            bitmap = PictureProcessing.ReverseColor(bitmap);
             ConvertedImage.Image = bitmap.Clone() as System.Drawing.Image;
             bitmaps.Add(bitmap);
         }
@@ -367,7 +368,7 @@ namespace ImageProcessingDemo1
 
         private void 去色ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bitmap = PictureProcessing.ReverseColor(bitmap);
+            bitmap = PictureProcessing.DeColor(bitmap);
             ConvertedImage.Image = bitmap.Clone() as System.Drawing.Image;
             bitmaps.Add(bitmap);
         }
@@ -498,7 +499,8 @@ namespace ImageProcessingDemo1
                     a= new Task(new Action(() => {
                         bitmap = PictureProcessing.DarkCorner(bitmap, CoefficientScrollBar.Value);
                     }));
-                    a.Start();
+                    a.RunSynchronously();
+                    //a.Start();
                     a.Wait();
                     //bitmap = PictureProcessing.DarkCorner(bitmap, CoefficientScrollBar.Value);
                     break;
@@ -577,6 +579,11 @@ namespace ImageProcessingDemo1
 
             }
             else return;
+        }
+
+        private void 文件FToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -140,7 +140,7 @@
             this.插入文本框ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(884, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(884, 32);
             this.menuStrip1.TabIndex = 28;
             this.menuStrip1.Text = "Menu";
             // 
@@ -155,8 +155,9 @@
             this.toolStripSeparator2,
             this.退出XToolStripMenuItem});
             this.文件FToolStripMenuItem.Name = "文件FToolStripMenuItem";
-            this.文件FToolStripMenuItem.Size = new System.Drawing.Size(84, 32);
+            this.文件FToolStripMenuItem.Size = new System.Drawing.Size(84, 28);
             this.文件FToolStripMenuItem.Text = "文件(&F)";
+            this.文件FToolStripMenuItem.Click += new System.EventHandler(this.文件FToolStripMenuItem_Click);
             // 
             // 新建NToolStripMenuItem
             // 
@@ -164,7 +165,7 @@
             this.新建NToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.新建NToolStripMenuItem.Name = "新建NToolStripMenuItem";
             this.新建NToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.新建NToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.新建NToolStripMenuItem.Text = "新建(&N)";
             this.新建NToolStripMenuItem.Click += new System.EventHandler(this.新建NToolStripMenuItem_Click);
             // 
@@ -174,36 +175,36 @@
             this.打开OToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.打开OToolStripMenuItem.Name = "打开OToolStripMenuItem";
             this.打开OToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.打开OToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.打开OToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.打开OToolStripMenuItem.Text = "打开(&O)";
             this.打开OToolStripMenuItem.Click += new System.EventHandler(this.打开OToolStripMenuItem_Click);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(239, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(267, 6);
             // 
             // 另存为AToolStripMenuItem
             // 
             this.另存为AToolStripMenuItem.Name = "另存为AToolStripMenuItem";
-            this.另存为AToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.另存为AToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.另存为AToolStripMenuItem.Text = "另存为(&A)";
             this.另存为AToolStripMenuItem.Click += new System.EventHandler(this.另存为AToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(239, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(239, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
             // 
             // 退出XToolStripMenuItem
             // 
             this.退出XToolStripMenuItem.Name = "退出XToolStripMenuItem";
-            this.退出XToolStripMenuItem.Size = new System.Drawing.Size(242, 34);
+            this.退出XToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.退出XToolStripMenuItem.Text = "退出(&X)";
             this.退出XToolStripMenuItem.Click += new System.EventHandler(this.退出XToolStripMenuItem_Click);
             // 
@@ -219,7 +220,7 @@
             this.全选AToolStripMenuItem});
             this.编辑EToolStripMenuItem.Enabled = false;
             this.编辑EToolStripMenuItem.Name = "编辑EToolStripMenuItem";
-            this.编辑EToolStripMenuItem.Size = new System.Drawing.Size(84, 32);
+            this.编辑EToolStripMenuItem.Size = new System.Drawing.Size(84, 28);
             this.编辑EToolStripMenuItem.Text = "编辑(&E)";
             // 
             // 撤消UToolStripMenuItem
@@ -283,7 +284,7 @@
             this.添加水印ToolStripMenuItem});
             this.工具TToolStripMenuItem.Enabled = false;
             this.工具TToolStripMenuItem.Name = "工具TToolStripMenuItem";
-            this.工具TToolStripMenuItem.Size = new System.Drawing.Size(84, 32);
+            this.工具TToolStripMenuItem.Size = new System.Drawing.Size(84, 28);
             this.工具TToolStripMenuItem.Text = "工具(&T)";
             // 
             // 特殊效果ToolStripMenuItem
@@ -421,7 +422,7 @@
             // 
             this.插入文本框ToolStripMenuItem.Enabled = false;
             this.插入文本框ToolStripMenuItem.Name = "插入文本框ToolStripMenuItem";
-            this.插入文本框ToolStripMenuItem.Size = new System.Drawing.Size(116, 32);
+            this.插入文本框ToolStripMenuItem.Size = new System.Drawing.Size(116, 28);
             this.插入文本框ToolStripMenuItem.Text = "插入文本框";
             this.插入文本框ToolStripMenuItem.Click += new System.EventHandler(this.插入文本框ToolStripMenuItem_Click);
             // 
