@@ -34,22 +34,24 @@
             // 
             // buttonVideo
             // 
-            this.buttonVideo.Location = new System.Drawing.Point(513, 168);
+            this.buttonVideo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonVideo.Location = new System.Drawing.Point(144, 61);
             this.buttonVideo.Name = "buttonVideo";
-            this.buttonVideo.Size = new System.Drawing.Size(84, 74);
+            this.buttonVideo.Size = new System.Drawing.Size(170, 324);
             this.buttonVideo.TabIndex = 0;
             this.buttonVideo.Text = "视频";
-            this.buttonVideo.UseVisualStyleBackColor = true;
+            this.buttonVideo.UseVisualStyleBackColor = false;
             this.buttonVideo.Click += new System.EventHandler(this.buttonVideo_Click);
             // 
             // buttonPicture
             // 
-            this.buttonPicture.Location = new System.Drawing.Point(143, 168);
+            this.buttonPicture.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonPicture.Location = new System.Drawing.Point(485, 61);
             this.buttonPicture.Name = "buttonPicture";
-            this.buttonPicture.Size = new System.Drawing.Size(84, 74);
+            this.buttonPicture.Size = new System.Drawing.Size(170, 324);
             this.buttonPicture.TabIndex = 1;
             this.buttonPicture.Text = "海报";
-            this.buttonPicture.UseVisualStyleBackColor = true;
+            this.buttonPicture.UseVisualStyleBackColor = false;
             this.buttonPicture.Click += new System.EventHandler(this.buttonPicture_Click);
             // 
             // Start
